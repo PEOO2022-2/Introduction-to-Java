@@ -16,7 +16,6 @@ public class Principal {
         conta1.sacar(20);
         conta2.sacar(400);
 
-
         conta1.transferir(100.40, conta2);
     }
 }
