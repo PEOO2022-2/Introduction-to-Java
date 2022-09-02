@@ -20,9 +20,9 @@ public class Conta {
         }
     }
 
-    void transferir(double valor, Conta contaRecebedor){
+    void transferir(double valor, Conta contaDestino){
         if (this.saldo >= valor){
-            contaRecebedor.depositar(valor);
+            contaDestino.depositar(valor);
             this.sacar(valor);
         } else {
             System.out.println("Não foi possível realizar a transferência.");

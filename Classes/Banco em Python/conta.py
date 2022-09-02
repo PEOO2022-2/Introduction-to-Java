@@ -20,11 +20,9 @@ class Conta:
 
     def transferir(self, valor, conta_destino):
         if valor <= self.saldo:
-            self.saldo -= valor
-            print(f"Valor retirado de {valor} na conta de {self.titular}")
-            print(f"Novo saldo {self.saldo}")
+            self.sacar(valor)
             conta_destino.depositar(valor)
 
         else:
-            print("Não foi possível efetuar o saque.")
+            print("Não foi possível efetuar a transferência.")
             print(f"Saldo disponível: {self.saldo}")
